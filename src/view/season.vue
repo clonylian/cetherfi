@@ -213,145 +213,7 @@
           </div>
           <div class="scfimgrb">
             <div class="scfsvgb">
-              <svg viewBox="-500 -500 1000 1000" class="scfsvg">
-                <g clip-path="url(#clip-path)">
-                  <rect
-                    x="500"
-                    y="500"
-                    width="1500"
-                    height="1500"
-                    fill="none"
-                  ></rect>
-                  <g class="sparks" style="transform: rotate(0deg)">
-                    <circle
-                      class="spark"
-                      r="10"
-                      style="--angle: 0deg; animation-delay: 0s"
-                    ></circle>
-                    <circle
-                      class="spark"
-                      r="10"
-                      style="--angle: 60deg; animation-delay: 0.2s"
-                    ></circle>
-                    <circle
-                      class="spark"
-                      r="10"
-                      style="--angle: 120deg; animation-delay: 0.4s"
-                    ></circle>
-                    <circle
-                      class="spark"
-                      r="10"
-                      style="--angle: 180deg; animation-delay: 0.6s"
-                    ></circle>
-                    <circle
-                      class="spark"
-                      r="10"
-                      style="--angle: 240deg; animation-delay: 0.8s"
-                    ></circle>
-                    <circle
-                      class="spark"
-                      r="10"
-                      style="--angle: 300deg; animation-delay: 1s"
-                    ></circle>
-                  </g>
-                  <g class="sparks" style="transform: rotate(75deg)">
-                    <circle
-                      class="spark"
-                      r="10"
-                      style="--angle: 0deg; animation-delay: 0.5s"
-                    ></circle>
-                    <circle
-                      class="spark"
-                      r="10"
-                      style="--angle: 60deg; animation-delay: 0.7s"
-                    ></circle>
-                    <circle
-                      class="spark"
-                      r="10"
-                      style="--angle: 120deg; animation-delay: 0.9s"
-                    ></circle>
-                    <circle
-                      class="spark"
-                      r="10"
-                      style="--angle: 180deg; animation-delay: 1.1s"
-                    ></circle>
-                    <circle
-                      class="spark"
-                      r="10"
-                      style="--angle: 240deg; animation-delay: 1.3s"
-                    ></circle>
-                    <circle
-                      class="spark"
-                      r="10"
-                      style="--angle: 300deg; animation-delay: 1.5s"
-                    ></circle>
-                  </g>
-                  <g class="sparks" style="transform: rotate(150deg)">
-                    <circle
-                      class="spark"
-                      r="10"
-                      style="--angle: 0deg; animation-delay: 0.25s"
-                    ></circle>
-                    <circle
-                      class="spark"
-                      r="10"
-                      style="--angle: 60deg; animation-delay: 0.45s"
-                    ></circle>
-                    <circle
-                      class="spark"
-                      r="10"
-                      style="--angle: 120deg; animation-delay: 0.65s"
-                    ></circle>
-                    <circle
-                      class="spark"
-                      r="10"
-                      style="--angle: 180deg; animation-delay: 0.85s"
-                    ></circle>
-                    <circle
-                      class="spark"
-                      r="10"
-                      style="--angle: 240deg; animation-delay: 1.05s"
-                    ></circle>
-                    <circle
-                      class="spark"
-                      r="10"
-                      style="--angle: 300deg; animation-delay: 1.25s"
-                    ></circle>
-                  </g>
-                  <g class="sparks" style="transform: rotate(225deg)">
-                    <circle
-                      class="spark"
-                      r="10"
-                      style="--angle: 0deg; animation-delay: 0.75s"
-                    ></circle>
-                    <circle
-                      class="spark"
-                      r="10"
-                      style="--angle: 60deg; animation-delay: 0.95s"
-                    ></circle>
-                    <circle
-                      class="spark"
-                      r="10"
-                      style="--angle: 120deg; animation-delay: 1.15s"
-                    ></circle>
-                    <circle
-                      class="spark"
-                      r="10"
-                      style="--angle: 180deg; animation-delay: 1.35s"
-                    ></circle>
-                    <circle
-                      class="spark"
-                      r="10"
-                      style="--angle: 240deg; animation-delay: 1.55s"
-                    ></circle>
-                    <circle
-                      class="spark"
-                      r="10"
-                      style="--angle: 300deg; animation-delay: 1.75s"
-                    ></circle>
-                  </g>
-                </g>
-              </svg>
+              <img src="../assets/bg.png" alt="" />
             </div>
             <img
               alt="whats next diamond"
@@ -1017,16 +879,21 @@ let render = () => {
 .scfimgb {
   display: grid;
   height: auto;
-  margin-top: 1.5rem;
-  padding: 2.5rem 0;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
+  margin-top: 1rem;
+  padding-bottom: 2.5rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   justify-content: center;
   align-items: center;
 }
 .scfimglb {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
+}
+.scfimglb img {
+  position: relative;
+  z-index: 5;
+  filter: drop-shadow(0 0 35px #ac2b82);
 }
 .scfimgrb {
   display: flex;
@@ -1035,13 +902,13 @@ let render = () => {
 .scfsvgb {
   align-self: center;
   position: relative;
-  transform: scaleX(1.5) scaleY(1.5);
 }
 .scfimgr {
   position: absolute;
   z-index: 10;
   top: 50%;
-  transform: translateY(-50%);
+  left: 50%;
+  transform: translateY(-50%) translateX(-50%);
   filter: drop-shadow(0 0 35px #ac2b82);
 }
 .scfsvg {
@@ -1192,6 +1059,7 @@ let render = () => {
   line-height: 1.375rem;
   margin: 0;
 }
+
 @media (max-width: 1250px) {
   .yhbgt {
     width: 4.6875rem;
@@ -1277,6 +1145,9 @@ let render = () => {
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
+  }
+  .scfsvgb > img {
+    width: 95%;
   }
 }
 </style>
